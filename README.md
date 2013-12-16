@@ -21,4 +21,4 @@ Lot of things. Given an infinite time:
 * Different renderings and properties between stars and planets
 * Rework the code architecture
 
-[1]: http://docs.nvidia.com/cuda/samples/5_Simulations/nbody/doc/nbody_gems3_ch31.pdf	"nbody"
+[1]: http://docs.nvidia.com/cuda/samples/5_Simulations/nbody/doc/nbody_gems3_ch31.pdf        "nbody"

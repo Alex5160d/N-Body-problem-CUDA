@@ -1,10 +1,10 @@
 RM := rm -rf
-CC=nvcc
-CFLAGS=-c -O3
+CC := nvcc
+CFLAGS := -c -O3
 LIBS := -lGLEW -lGLU -lglut
-SOURCES = bodySystemAbstract.cu bodySystemCpu.cu bodySystemCuda.cu main.cu renderer.cu
-OBJECTS=$(SOURCES:.cu=.o)
-EXECUTABLE=nbody_problem
+SOURCES := bodySystemAbstract.cu bodySystemCpu.cu bodySystemCuda.cu main.cu renderer.cu
+OBJECTS := $(SOURCES:.cu=.o)
+EXECUTABLE := nbody_problem
 
 
 all : $(EXECUTABLE)
@@ -19,4 +19,4 @@ clean:
 	-$(RM) $(OBJECTS)
 
 mrproper: clean
-	-$(RM) "nbody_problem"
+	-$(RM) $(EXECUTABLE)

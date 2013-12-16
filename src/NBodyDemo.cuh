@@ -194,7 +194,7 @@ private:
 	 */
 	void checkCmdLine(int argc, char** argv) {
 		int opt;
-		while ((opt = getopt(argc, argv, "fcb:m")) != -1) {
+		while ((opt = getopt(argc, argv, "fcb:h")) != -1) {
 			switch (opt) {
 			case 'f':
 				demoParams.fullscreen = true;
@@ -211,6 +211,11 @@ private:
 				if (demoParams.bodies > 32) // to have a better match with our wraps size
 					demoParams.bodies = 32 * (int) (demoParams.bodies / 32);
 				break;
+			case 'h':
+				fprintf(stderr, "-f: enable fullscreen\n"
+						"-c: enable cpu solving instead of gpu\n"
+						"-b: set bodies number\n");
+				exit(EXIT_SUCCESS);
 			default:
 				fprintf(stderr, "-f: enable fullscreen\n"
 						"-c: enable cpu solving instead of gpu\n"
